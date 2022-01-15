@@ -13,14 +13,19 @@ let readableTimetable = (workdays) => {
     workdays.map(x=> 
         // arr.push(`${x["day"]}: ${x["from"]} - ${x["to"]}`)
         // arr.push([x["day"],x["from"]+' '+x["to"]])
-        arr[x["day"]] = x["from"]+' '+x["to"]
+        arr.push([x["day"].toUpperCase() , x["from"]+' '+x["to"]])
         )
         let x = arr[0]
-        for (let i = 1 , i<arr.length , i++) {
-            
+        for (let i = 1 ; i <arr.length ;i++) {
+            if (x[1]===arr[i][1]) {
+                arr[i][0] = x[0]+ " - " + arr[i][0] 
+                arr[i-1] = null
+            }
+            x= arr[i]
         }
-
-    return arr
+        // arr.filter(x=>x).map(x=>x[0].length>10 ? x[0].slice(3,8): x)
+        // arr
+    return arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x)
   };
 
   const data = [
