@@ -17,7 +17,7 @@ let humanReadable = x => {
    let m=0;
    if (x<=3599) {
        m = Math.floor(x/60)
-       s =  Math.floor((x/60 - Math.floor(x/60))*60)
+       s= x- m*60
    } else if (x>3599 && x <=359999){
        h = Math.floor(x/3600)
        m = Math.floor((x-h*3600) /60)
@@ -32,4 +32,4 @@ let humanReadable = x => {
 
    return h + ":" + m + ":" + s
 }
-console.log(humanReadable(60))
+console.log(humanReadable(3541))
