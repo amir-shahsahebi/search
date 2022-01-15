@@ -13,8 +13,14 @@
 
 let humanReadable = x => {
    let s=  (x/60 - Math.floor(x/60))*60
-   let m = Math.floor(x/60)
-//    let h = 
-   return m + " " + s
+   let h=0;
+   let m=0;
+   if (Math.floor(x/60)<=60){
+    m = Math.floor(x/60)
+    } else {
+         m = 60;
+         h = Math.floor(x/60)-60
+    } 
+   return h + " " + m + " " + s
 }
 console.log(humanReadable(5000))
