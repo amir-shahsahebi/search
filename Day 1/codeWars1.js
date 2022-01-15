@@ -26,9 +26,9 @@ let humanReadable = x => {
     if (s===0) s="00"
     if (s>0 && s<10) s=`0${s}`
     if (m===0) m="00"
-    if (m>0 && m<10) s=`0${m}`
+    if (m>0 && m<10) m=`0${m}`
     if (h===0) h="00"
-    if (h>0 && h<10) s=`0${h}`
+    if (h>0 && h<10) h=`0${h}`
 
    return h + ":" + m + ":" + s
 }
