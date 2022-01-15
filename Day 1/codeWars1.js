@@ -15,14 +15,21 @@ let humanReadable = x => {
    let s=0;
    let h=0;
    let m=0;
-   if (x<=3540) {
+   if (x<=3599) {
        m = Math.floor(x/60)
-       s =  (x/60 - Math.floor(x/60))*60
-   } else if (x>3540 && x <=359999){
+       s =  Math.floor((x/60 - Math.floor(x/60))*60)
+   } else if (x>3599 && x <=359999){
        h = Math.floor(x/3600)
-       m = Math.floor(x/60) -60
+       m = Math.floor((x-h*3600) /60)
        s= x- h*3600 - m*60
     } 
-   return h + " " + m + " " + s
+    if (s===0) s="00"
+    if (s>0 && s<10) s=`0${s}`
+    if (m===0) m="00"
+    if (m>0 && m<10) s=`0${m}`
+    if (h===0) h="00"
+    if (h>0 && h<10) s=`0${h}`
+
+   return h + ":" + m + ":" + s
 }
-console.log(humanReadable(5000))
+console.log(humanReadable(60))
