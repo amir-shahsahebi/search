@@ -12,14 +12,16 @@
 // You can find some examples in the test fixtures.
 
 let humanReadable = x => {
-   let s=  (x/60 - Math.floor(x/60))*60
+   let s=0;
    let h=0;
    let m=0;
-   if (Math.floor(x/60)<=60){
-    m = Math.floor(x/60)
-    } else {
-         m = 60;
-         h = Math.floor(x/60)-60
+   if (x<=3540) {
+       m = Math.floor(x/60)
+       s =  (x/60 - Math.floor(x/60))*60
+   } else if (x>3540 && x <=359999){
+       h = Math.floor(x/3600)
+       m = Math.floor(x/60) -60
+       s= x- h*3600 - m*60
     } 
    return h + " " + m + " " + s
 }
