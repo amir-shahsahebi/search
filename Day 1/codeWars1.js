@@ -12,7 +12,9 @@
 // You can find some examples in the test fixtures.
 
 let humanReadable = x => {
-   let s=  x%60
-   let m = x/60 - s
+   let s=  (x/60 - Math.floor(x/60))*60
+   let m = Math.floor(x/60)
+//    let h = 
+   return m + " " + s
 }
-console.log(humanReadable(90))
+console.log(humanReadable(5000))
