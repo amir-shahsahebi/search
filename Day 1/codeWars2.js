@@ -25,7 +25,9 @@ let readableTimetable = (workdays) => {
         }
         // arr.filter(x=>x).map(x=>x[0].length>10 ? x[0].slice(3,8): x)
         // arr
-    return arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
+    // return arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
+    let arr2 =arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
+    return arr2.toString();
   };
 
   const data = [
@@ -91,3 +93,11 @@ const test2 = [
 // THU - FRI: 12:00 - 23:00
 // SAT: 10:00 - 23:00
 // SUN: 11:00 - 23:00
+let x = `MON: 11:00 - 23:00
+TUE: 11:00 - 22:00
+WED: 11:00 - 23:00
+THU: 12:00 - 22:00
+FRI: 12:00 - 23:00
+SAT: 10:00 - 22:00
+SUN: 11:00 - 23:00`;
+console.log(x)
