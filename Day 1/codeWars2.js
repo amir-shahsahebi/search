@@ -25,7 +25,7 @@ let readableTimetable = (workdays) => {
         }
         // arr.filter(x=>x).map(x=>x[0].length>10 ? x[0].slice(3,8): x)
         // arr
-    return arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x)
+    return arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
   };
 
   const data = [
@@ -65,7 +65,27 @@ let readableTimetable = (workdays) => {
         "to": "23:00"
     }
 ]
-console.log(readableTimetable(data))
+// console.log(readableTimetable(data))
+const test0 = [
+  { day: "mon", from: "11:00", to: "23:00" },
+  { day: "tue", from: "11:00", to: "22:00" },
+  { day: "wed", from: "11:00", to: "23:00" },
+  { day: "thu", from: "12:00", to: "22:00" },
+  { day: "fri", from: "12:00", to: "23:00" },
+  { day: "sat", from: "10:00", to: "22:00" },
+  { day: "sun", from: "11:00", to: "23:00" },
+]
+console.log(readableTimetable(test0))
+
+const test2 = [
+    { day: "mon", from: "11:00", to: "23:00" },
+    { day: "tue", from: "11:00", to: "23:00" },
+    { day: "thu", from: "11:00", to: "23:00" },
+    { day: "sat", from: "11:00", to: "23:00" },
+    { day: "sun", from: "11:00", to: "23:00" },
+]
+// console.log(readableTimetable(test2));
+
 // Out put
 // MON - WED: 11:00 - 23:00
 // THU - FRI: 12:00 - 23:00
