@@ -11,3 +11,8 @@
 
 // You can find some examples in the test fixtures.
 
+let humanReadable = x => {
+   let s=  x%60
+   let m = x/60 - s
+}
+console.log(humanReadable(90))
