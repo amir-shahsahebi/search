@@ -9,6 +9,8 @@
 // If two or more days of the week in a row have the same working hours they should be concatenated and have the following format: MON - WED: 11:00 - 23:00.
 
 let readableTimetable = (workdays) => {
+    let empty1 = [[]]
+    if (workdays===[]) return empty1
     let arr = []
     workdays.map(x=> 
         // arr.push(`${x["day"]}: ${x["from"]} - ${x["to"]}`)
@@ -31,7 +33,6 @@ let readableTimetable = (workdays) => {
     let arr3 =""
      arr2.map(x=>arr3=arr3+"\n"+x)
     return arr3
-    
   };
 
   const data = [
@@ -71,7 +72,8 @@ let readableTimetable = (workdays) => {
         "to": "23:00"
     }
 ]
-console.log(readableTimetable(data))
+// console.log(readableTimetable(data))
+console.log(readableTimetable([]))
 const test0 = [
   { day: "mon", from: "11:00", to: "23:00" },
   { day: "tue", from: "11:00", to: "22:00" },
@@ -81,7 +83,7 @@ const test0 = [
   { day: "sat", from: "10:00", to: "22:00" },
   { day: "sun", from: "11:00", to: "23:00" },
 ]
-console.log(readableTimetable(test0))
+// console.log(readableTimetable(test0))
 
 const test2 = [
     { day: "mon", from: "11:00", to: "23:00" },
