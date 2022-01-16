@@ -29,7 +29,8 @@ let readableTimetable = (workdays) => {
     let arr2 =arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
     // return arr2.toString();
     let arr3 =""
-    return arr2.map(x=>arr3=x+"\n")
+     arr2.map(x=>arr3=arr3+"\n"+x)
+    return arr3
     
   };
 
