@@ -68,7 +68,7 @@ let readableTimetable = (workdays) => {
         "to": "23:00"
     }
 ]
-// console.log(readableTimetable(data))
+console.log(readableTimetable(data))
 const test0 = [
   { day: "mon", from: "11:00", to: "23:00" },
   { day: "tue", from: "11:00", to: "22:00" },
@@ -94,11 +94,11 @@ const test2 = [
 // THU - FRI: 12:00 - 23:00
 // SAT: 10:00 - 23:00
 // SUN: 11:00 - 23:00
-let x = `MON: 11:00 - 23:00
-TUE: 11:00 - 22:00
-WED: 11:00 - 23:00
-THU: 12:00 - 22:00
-FRI: 12:00 - 23:00
-SAT: 10:00 - 22:00
-SUN: 11:00 - 23:00`;
-console.log(x)
+// let x = `MON: 11:00 - 23:00
+// TUE: 11:00 - 22:00
+// WED: 11:00 - 23:00
+// THU: 12:00 - 22:00
+// FRI: 12:00 - 23:00
+// SAT: 10:00 - 22:00
+// SUN: 11:00 - 23:00`;
+// console.log(x)
