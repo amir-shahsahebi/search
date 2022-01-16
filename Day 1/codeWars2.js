@@ -33,7 +33,7 @@ let readableTimetable = (workdays) => {
     // return arr2.toString();
     let arr3 =""
      arr2.map(x=>arr3=arr3+"\n"+x)
-    return arr3
+    return arr3.trim()
   }};
 
   const data = [
@@ -93,7 +93,7 @@ const test2 = [
     { day: "sat", from: "11:00", to: "23:00" },
     { day: "sun", from: "11:00", to: "23:00" },
 ]
-// console.log(readableTimetable(test2));
+console.log(readableTimetable(test2));
 
 // Out put
 // MON - WED: 11:00 - 23:00
@@ -107,4 +107,4 @@ THU: 12:00 - 22:00
 FRI: 12:00 - 23:00
 SAT: 10:00 - 22:00
 SUN: 11:00 - 23:00`
-console.log(x)
+// console.log(x)
