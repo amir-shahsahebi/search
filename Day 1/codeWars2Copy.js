@@ -68,7 +68,7 @@ const test2 = [
     { day: "sat", from: "11:00", to: "23:00" },
     { day: "sun", from: "11:00", to: "23:00" },
 ]
-// console.log(readableTimetable(test2));
+console.log(readableTimetable(test2));
 // console.log(`MON - TUE: 11:00 - 23:00
 // THU: 11:00 - 23:00
 // SAT - SUN: 11:00 - 23:00`)
