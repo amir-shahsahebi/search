@@ -15,14 +15,15 @@ let readableTimetable = (workdays) => {
     workdays.map(x=>arr.push([x["day"].toUpperCase() , x["from"]+' - '+x["to"]]))
         let x = arr[0]
         let days = {
-           "MON:" : 1,
-           "TUE:" : 2,
-           "WED:" : 3,
-           "THU:" : 4, 
-           "FRI:" : 5,
-           "SAT:" : 6,
-           "SUN:" : 7,
+           "MON" : 1,
+           "TUE" : 2,
+           "WED" : 3,
+           "THU" : 4, 
+           "FRI" : 5,
+           "SAT" : 6,
+           "SUN" : 7,
         }   
+        // console.log(arr)
         for (let i = 1 ; i <arr.length ;i++) {
             if (x[1]===arr[i][1] && days[arr[i][0]] - days[arr[i-1][0]] ===1) {
                 arr[i][0] = x[0]+ " - " + arr[i][0] 
@@ -52,7 +53,9 @@ const test2 = [
     { day: "sun", from: "11:00", to: "23:00" },
 ]
 console.log(readableTimetable(test2));
-
+console.log(`MON - TUE: 11:00 - 23:00
+THU: 11:00 - 23:00
+SAT - SUN: 11:00 - 23:00`)
   const data = [
     {
         "day": "sat",
@@ -101,7 +104,7 @@ const test0 = [
   { day: "sat", from: "10:00", to: "22:00" },
   { day: "sun", from: "11:00", to: "23:00" },
 ]
-console.log(readableTimetable(test0))
+// console.log(readableTimetable(test0))
 
 // Out put
 // MON - WED: 11:00 - 23:00
