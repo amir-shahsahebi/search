@@ -91,7 +91,17 @@ const test2 = [
     { day: "sat", from: "11:00", to: "23:00" },
     { day: "sun", from: "11:00", to: "23:00" },
 ]
-console.log(readableTimetable(test2));
+// console.log(readableTimetable(test2));
+const test4 = [
+  { day: "mon", from: "11:00", to: "23:00" },
+  { day: "tue", from: "11:00", to: "23:00" },
+  { day: "wed", from: "11:00", to: "23:00" },
+  { day: "thu", from: "11:00", to: "23:00" },
+  // { day: "fri", from: "11:00", to: "23:00" },
+  { day: "sat", from: "11:00", to: "23:00" },
+  { day: "sun", from: "11:00", to: "23:00" },
+];
+console.log(readableTimetable(test4));
 // console.log(`MON - TUE: 11:00 - 23:00
 // THU: 11:00 - 23:00
 // SAT - SUN: 11:00 - 23:00`)
