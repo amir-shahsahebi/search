@@ -9,14 +9,13 @@
 // If two or more days of the week in a row have the same working hours they should be concatenated and have the following format: MON - WED: 11:00 - 23:00.
 
 let readableTimetable = (workdays) => {
-    let empty1 = []
-    if (workdays===[]) return empty1
+    if (workdays.length===0) return []
     else{
     let arr = []
     workdays.map(x=> 
         // arr.push(`${x["day"]}: ${x["from"]} - ${x["to"]}`)
         // arr.push([x["day"],x["from"]+' '+x["to"]])
-        arr.push([x["day"].toUpperCase() , x["from"]+' '+x["to"]])
+        arr.push([x["day"].toUpperCase() , x["from"]+' - '+x["to"]])
         )
         let x = arr[0]
         for (let i = 1 ; i <arr.length ;i++) {
@@ -29,6 +28,7 @@ let readableTimetable = (workdays) => {
         // arr.filter(x=>x).map(x=>x[0].length>10 ? x[0].slice(3,8): x)
         // arr
     // return arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
+    // console.log(arr)
     let arr2 =arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
     // return arr2.toString();
     let arr3 =""
@@ -74,7 +74,7 @@ let readableTimetable = (workdays) => {
     }
 ]
 // console.log(readableTimetable(data))
-console.log(readableTimetable([]))
+// console.log(readableTimetable([]))
 const test0 = [
   { day: "mon", from: "11:00", to: "23:00" },
   { day: "tue", from: "11:00", to: "22:00" },
@@ -84,7 +84,7 @@ const test0 = [
   { day: "sat", from: "10:00", to: "22:00" },
   { day: "sun", from: "11:00", to: "23:00" },
 ]
-// console.log(readableTimetable(test0))
+console.log(readableTimetable(test0))
 
 const test2 = [
     { day: "mon", from: "11:00", to: "23:00" },
@@ -100,11 +100,11 @@ const test2 = [
 // THU - FRI: 12:00 - 23:00
 // SAT: 10:00 - 23:00
 // SUN: 11:00 - 23:00
-// let x = `MON: 11:00 - 23:00
-// TUE: 11:00 - 22:00
-// WED: 11:00 - 23:00
-// THU: 12:00 - 22:00
-// FRI: 12:00 - 23:00
-// SAT: 10:00 - 22:00
-// SUN: 11:00 - 23:00`;
-// console.log(x)
+let x = `MON: 11:00 - 23:00
+TUE: 11:00 - 22:00
+WED: 11:00 - 23:00
+THU: 12:00 - 22:00
+FRI: 12:00 - 23:00
+SAT: 10:00 - 22:00
+SUN: 11:00 - 23:00`
+console.log(x)
