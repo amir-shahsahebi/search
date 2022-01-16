@@ -26,9 +26,11 @@ let readableTimetable = (workdays) => {
         // arr.filter(x=>x).map(x=>x[0].length>10 ? x[0].slice(3,8): x)
         // arr
     // return arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
-    let arr2 =arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1]).forEach(x=>console.log(x))
+    let arr2 =arr.filter(x=>x).map(x=>x[0].length>9 ? [x[0].slice(0,3)+x[0].slice(9),x[1]]: x).map(x=>x[0]+": "+x[1])
     // return arr2.toString();
-    // return arr2.
+    let arr3 =""
+    return arr2.map(x=>arr3=x+"\n")
+    
   };
 
   const data = [
