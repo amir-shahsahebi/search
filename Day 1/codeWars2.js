@@ -13,30 +13,32 @@ let readableTimetable = (workdays) => {
     else{
     let arr = []
     workdays.map(x=>arr.push([x["day"].toUpperCase() , x["from"]+' - '+x["to"]]))
-        let x = arr[0]
-        let days = {
-           "MON" : 0,
-           "TUE" : 1,
-           "WED" : 2,
-           "THU" : 3, 
-           "FRI" : 4,
-           "SAT" : 5,
-           "SUN" : 6,
-        }   
-        let arr0=[]
-        
-        for (key in days){
-            for (let i = 0 ; i <arr.length ;i++) {
+    let days = {
+        "MON" : 0,
+        "TUE" : 1,
+        "WED" : 2,
+        "THU" : 3, 
+        "FRI" : 4,
+        "SAT" : 5,
+        "SUN" : 6,
+    }   
+    let arr0=[]
+    
+    for (key in days){
+        for (let i = 0 ; i <arr.length ;i++) {
             if (key === arr[i][0]) arr0[days[key]]=arr[i]
-                }
         }
-        arr=arr0.filter(x=>x)
-        // console.log(arr)
-        // console.log(arr0)
+    }
+    arr=arr0.filter(x=>x)
+    let x = arr[0]
+    console.log(arr)
+    // console.log(arr0)
         for (let i = 1 ; i <arr.length ;i++) {
-            if (x[1]===arr[i][1] && days[arr[i][0]] - days[arr[i-1][0]] ===1) {
+            // if (x[1]===arr[i][1] && days[arr[i][0]] - days[arr[i-1][0]] <=2) {
+            if (x[1]===arr[i][1] ) {
                 arr[i][0] = x[0]+ " - " + arr[i][0] 
                 arr[i-1] = null
+                // arr=arr.filter(x=>x)
             }
             x= arr[i]
         }
@@ -54,13 +56,13 @@ let readableTimetable = (workdays) => {
     return arr3.trim()
 }};
 
-// const test2 = [
-//     { day: "mon", from: "11:00", to: "23:00" },
-//     { day: "tue", from: "11:00", to: "23:00" },
-//     { day: "thu", from: "11:00", to: "23:00" },
-//     { day: "sat", from: "11:00", to: "23:00" },
-//     { day: "sun", from: "11:00", to: "23:00" },
-// ]
+const test2 = [
+    { day: "mon", from: "11:00", to: "23:00" },
+    { day: "tue", from: "11:00", to: "23:00" },
+    { day: "thu", from: "11:00", to: "23:00" },
+    { day: "sat", from: "11:00", to: "23:00" },
+    { day: "sun", from: "11:00", to: "23:00" },
+]
 // console.log(readableTimetable(test2));
 // console.log(`MON - TUE: 11:00 - 23:00
 // THU: 11:00 - 23:00
