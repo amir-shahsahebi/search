@@ -29,15 +29,16 @@ let readableTimetable = (workdays) => {
             if (key === arr[i][0]) arr0[days[key]]=arr[i]
         }
     }
-    arr=arr0.filter(x=>x)
+    // arr=arr0.filter(x=>x)
     let x = arr[0]
-    console.log(arr)
+    // console.log(arr)
     // console.log(arr0)
         for (let i = 1 ; i <arr.length ;i++) {
-            if (x[1]===arr[i][1] && days[arr[i][0]] - days[arr[i-1][0]] ===1) {
-            // if (x[1]===arr[i][1] ) {
+            // if (x[1]===arr[i][1] && days[arr[i][0]] - days[arr[i-1][0]] ===1) {
+            if (x[1]===arr[i][1] ) {
                 arr[i][0] = x[0]+ " - " + arr[i][0] 
                 arr[i-1] = [arr[i-1][0],null]
+                arr[i-1] = null
                 // arr=arr.filter(x=>x)
             }
             x= arr[i]
