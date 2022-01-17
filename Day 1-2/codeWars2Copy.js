@@ -73,6 +73,8 @@ console.log(arr);
           x[0].length === 15 ? [x[0].slice(0, 3) + x[0].slice(9), x[1]] 
           : x[0].length === 21 ? [x[0].slice(0, 3) + x[0].slice(15), x[1]] 
           : x[0].length === 27 ? [x[0].slice(0, 3) + x[0].slice(22), x[1]] 
+          : x[0].length === 33 ? [x[0].slice(0, 3) + x[0].slice(25), x[1]] 
+          : x[0].length === 39 ? [x[0].slice(0, 3) + x[0].slice(29), x[1]] 
           : x
         )
         .map((x) => x[0] + ": " + x[1]);
