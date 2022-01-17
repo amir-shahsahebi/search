@@ -1,5 +1,5 @@
 // ...
-console.log(null===false)
+// console.log(null===false)
 let hdd = 4
 let obj = {
     "name" : "PC",
@@ -7,7 +7,7 @@ let obj = {
     "color" : "black",
     "price value" : "$100",
     hdd : 2,
-    count :  () {
+    count :function  () {
         let count=0
          x.map(y=>count= y + count)
         return count+ this.hdd
@@ -19,8 +19,8 @@ let obj = {
     }
 }
 
-// let arr = [1,2,3,4,5,6,7,8,9]
-// console.log(obj.count(arr))
+let arr = [1,2,3,4,5,6,7,8,9]
+console.log(obj.count(arr))
 
 // let obj2 = {
 //     name : "PC",
