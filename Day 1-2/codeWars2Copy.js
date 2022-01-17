@@ -70,11 +70,11 @@ let readableTimetable = (workdays) => {
 console.log(arr);
         arr2=arr2.map((x) => (x[1].length === 0 ? (x = null) : x))
         .map((x) =>
-          x[0].length === 15 ? [x[0].slice(0, 3) + x[0].slice(9), x[1]] 
+            x[0].length === 15 ? [x[0].slice(0, 3) + x[0].slice(9), x[1]] 
           : x[0].length === 21 ? [x[0].slice(0, 3) + x[0].slice(15), x[1]] 
-          : x[0].length === 27 ? [x[0].slice(0, 3) + x[0].slice(22), x[1]] 
-          : x[0].length === 33 ? [x[0].slice(0, 3) + x[0].slice(25), x[1]] 
-          : x[0].length === 39 ? [x[0].slice(0, 3) + x[0].slice(29), x[1]] 
+          : x[0].length === 27 ? [x[0].slice(0, 3) + x[0].slice(21), x[1]] 
+          : x[0].length === 33 ? [x[0].slice(0, 3) + x[0].slice(28), x[1]] 
+          : x[0].length === 39 ? [x[0].slice(0, 3) + x[0].slice(33), x[1]] 
           : x
         )
         .map((x) => x[0] + ": " + x[1]);
@@ -102,7 +102,7 @@ const test4 = [
   { day: "tue", from: "11:00", to: "23:00" },
   { day: "wed", from: "11:00", to: "23:00" },
   { day: "thu", from: "11:00", to: "23:00" },
-  // { day: "fri", from: "11:00", to: "23:00" },
+  { day: "fri", from: "11:00", to: "23:00" },
   { day: "sat", from: "11:00", to: "23:00" },
   { day: "sun", from: "11:00", to: "23:00" },
 ];
