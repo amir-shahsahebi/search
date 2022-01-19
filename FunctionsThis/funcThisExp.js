@@ -68,15 +68,14 @@
 
 /* ================================ */
 
-function collectEggs() {
-    totalEggs = 6
+// function collectEggs() {
+//     totalEggs = 6
     // let var and const can't be accessable outside the function scope
     // FUNCTION SCOPE
-}
+// }
 // // it will log an error because the function hasn't been executed yet.
 // console.log(totalEggs)
-collectEggs()
-console.log(totalEggs)
+// collectEggs() talEggs)
 
 
 /* ================Quiz================ */
@@ -92,13 +91,13 @@ console.log(totalEggs)
 
 /* ================Quiz================ */
 
-// const creature = "Dragon"
+const creature = "Dragon"
 
-// function scubaDive(){
-//     const creature = 'Spanish Dancer' // a type of sea slug
-//     console.log(creature)
-// }
-// scubaDive()
+function scubaDive(){
+    const creature = 'Spanish Dancer' // a type of sea slug
+    console.log(creature)
+}
+scubaDive()
 
 /* ================Quiz================ */
 
