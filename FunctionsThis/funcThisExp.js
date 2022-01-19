@@ -16,7 +16,7 @@ function collectEggs() {
 }
 
 console.log(totalEggs)
-// collectEggs()
+collectEggs()
 // console.log(totalEggs)
 
 /* ================================ */
