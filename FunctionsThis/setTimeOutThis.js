@@ -22,3 +22,6 @@ let obj = {
 }
 obj.tm2()
 obj.tm3()
+/* note:
+when use set time oun with function declaration inner it, its refer to window but when use arrow function in it, it refer to parents of its parent
+*/
