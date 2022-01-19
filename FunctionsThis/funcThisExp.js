@@ -4,8 +4,8 @@ function collectEggs() {
 
 // collectEggs()
 // console.log(totalEggs)
-let a = "test"
-console.log(a)
+// let a = "test"
+// console.log(a)
 // const a = "x"
 
 /* ================================ */
@@ -15,7 +15,7 @@ function collectEggs() {
    totalEggs = 6
 }
 
-// console.log(totalEggs)
+console.log(totalEggs)
 // collectEggs()
 // console.log(totalEggs)
 
