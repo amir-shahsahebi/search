@@ -35,4 +35,6 @@ let obj = {
 // console.log(obj.we.c())
 // console.log(obj.xc.ccc())
 // console.log(obj.xc.ttt())
-console.log(obj.www())
+// console.log(obj.www())
+
+console.log(obj.color)
