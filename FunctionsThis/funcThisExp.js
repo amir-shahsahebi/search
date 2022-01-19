@@ -2,15 +2,18 @@ function collectEggs() {
     let totalEggs = 6
 }
 
-collectEggs()
-console.log(totalEggs)
+// collectEggs()
+// console.log(totalEggs)
+let a = "test"
+console.log(a)
+// const a = "x"
 
 /* ================================ */
 
-// const totalEggs = 0
-// function collectEggs() {
-//    totalEggs = 6
-// }
+const totalEggs = 0
+function collectEggs() {
+   totalEggs = 6
+}
 
 // console.log(totalEggs)
 // collectEggs()
