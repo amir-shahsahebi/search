@@ -32,15 +32,15 @@
 /* ================================ */
 
 //NEVER TRY IT AT HOME!!!
-function collectEggs() {
-    totalEggs = 6
+// function collectEggs() {
+//     totalEggs = 6
 //     let totalEggs = 6
 //     const totalEggs = 6
 //   var totalEggs = 6
-}
+// }
 
-collectEggs()
-console.log(totalEggs)
+// collectEggs()
+// console.log(totalEggs)
 
 /* ================================= */
 //NEVER EVER DO IT:
@@ -56,7 +56,7 @@ console.log(totalEggs)
 
 // function collectEggs() {
 //   const totalEggs = 6
-// //    totalEggs = 6
+//  // //  totalEggs = 6
 
 //   console.log(totalEggs)
 // }
@@ -68,15 +68,15 @@ console.log(totalEggs)
 
 /* ================================ */
 
-// function collectEggs() {
-//     totalEggs = 6
-//     // let var and const can't be accessable outside the function scope
-//     // FUNCTION SCOPE
-// }
+function collectEggs() {
+    totalEggs = 6
+    // let var and const can't be accessable outside the function scope
+    // FUNCTION SCOPE
+}
 // // it will log an error because the function hasn't been executed yet.
 // console.log(totalEggs)
-// collectEggs()
-// console.log(totalEggs)
+collectEggs()
+console.log(totalEggs)
 
 
 /* ================Quiz================ */
