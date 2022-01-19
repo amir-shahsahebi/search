@@ -1,6 +1,6 @@
-function collectEggs() {
-    let totalEggs = 6
-}
+// function collectEggs() {
+//     let totalEggs = 6
+// }
 
 // collectEggs()
 // console.log(totalEggs)
@@ -10,13 +10,13 @@ function collectEggs() {
 
 /* ================================ */
 
-const totalEggs = 0
-function collectEggs() {
-   totalEggs = 6
-}
+// const totalEggs = 0
+// function collectEggs() {
+//    totalEggs = 6
+// }
 
-console.log(totalEggs)
-collectEggs()
+// console.log(totalEggs)
+// collectEggs()
 // console.log(totalEggs)
 
 /* ================================ */
@@ -32,14 +32,15 @@ collectEggs()
 /* ================================ */
 
 //NEVER TRY IT AT HOME!!!
-// function collectEggs() {
-//     // totalEggs = 6
-//     // let totalEggs = 6
+function collectEggs() {
+    totalEggs = 6
+//     let totalEggs = 6
+//     const totalEggs = 6
 //   var totalEggs = 6
-// }
+}
 
-// collectEggs()
-// console.log(totalEggs)
+collectEggs()
+console.log(totalEggs)
 
 /* ================================= */
 //NEVER EVER DO IT:
