@@ -17,5 +17,5 @@ callTwice(rollDie)
 
 let x = () => "hello"
 console.log(x())
-let secondFunc = (ff,tt) => ff + " Amir" + " "+ ff + " " + tt
-console.log(secondFunc(x(),"thats Works"))
+let secondFunc = (ff,tt) => ff() + " Amir" + " "+ ff() + " " + tt
+console.log(secondFunc(x,"thats Works"))
