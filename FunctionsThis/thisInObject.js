@@ -14,6 +14,7 @@ const cat = {
       arrow()
     },
     thisIs: `this is ${this}`,
+    thisIs2: `this is ${this.cat.color}`,
     arrow : () =>{
       console.log('arrow' , this)
     }
@@ -38,5 +39,5 @@ const cat = {
   
   
   // welcome to javascript :)
-  // console.log(this)
+  console.log(this)
   
