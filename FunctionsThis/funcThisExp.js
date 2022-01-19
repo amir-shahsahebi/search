@@ -91,13 +91,13 @@
 
 /* ================Quiz================ */
 
-const creature = "Dragon"
+// const creature = "Dragon"
 
-function scubaDive(){
-    const creature = 'Spanish Dancer' // a type of sea slug
-    console.log(creature)
-}
-scubaDive()
+// function scubaDive(){
+    // const creature = 'Spanish Dancer' // a type of sea slug
+//     console.log(creature)
+// }
+// scubaDive()
 
 /* ================Quiz================ */
 
