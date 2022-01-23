@@ -17,11 +17,14 @@
         <div id="cat-chat"></div>
         
         <script>
-        // var cat = document.getElementById="cat-pic"
-        var cat = document.getElementsByName="img"
+        var cat = document.getElementById("cat-pic")
+        var callback = function () {
+            document.getElementById("cat-chat").innerText = "Meow"
+        } 
         // var cat = document.querySelectorAll="#cat-pic"
-
+        callback()
         console.log(cat)
+        console.log(callback())
         </script>
     </body>
 </html>
