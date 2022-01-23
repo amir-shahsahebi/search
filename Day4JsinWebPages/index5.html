@@ -31,12 +31,14 @@
     <script>
         var div1 = document.createElement("div")
         div1.classList.add("planet")
-        div1.style.backgroundColor = "red"
-        document.body.append(div1)
-        var div2 = document.cteateElement("div")
-        div2.classList.add("moon")
+        div1.style.backgroundColor = "white"
+        div1.style.left = "200px"
+        div1.style.top = "100px"
+        document.body.appendChild(div1)
+        var div2 = document.createElement("div")
+        div2.classList.add("planet")
         div2.class.backgrounColor= "red"
-        document.body.append(div2)
+        div1.append(div2)
     </script>
     </body>
 </html>
