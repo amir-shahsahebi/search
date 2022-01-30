@@ -7,7 +7,15 @@ h1.append(p);
 // no need to this
 // const body = document.querySelector('body')
 
-button.addEventListener("click", () => {
+// button.addEventListener("click", () => {
+//     const newColor = randomColor();
+//     document.body.style.backgroundColor = newColor;
+//     p.innerText = newColor;
+//     p.style.color=newColor ;
+//     p.style.backgroundColor= "black"
+//   console.log(p)
+// });
+button.addEventListener("mousemove", () => {
     const newColor = randomColor();
     document.body.style.backgroundColor = newColor;
     p.innerText = newColor;
