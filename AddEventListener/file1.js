@@ -8,9 +8,12 @@ h1.append(p);
 // const body = document.querySelector('body')
 
 button.addEventListener("click", () => {
-  const newColor = randomColor();
-  document.body.style.backgroundColor = newColor;
-  p.innerText = newColor;
+    const newColor = randomColor();
+    document.body.style.backgroundColor = newColor;
+    p.innerText = newColor;
+    p.style.color=newColor ;
+    p.style.backgroundColor= "black"
+  console.log(p)
 });
 
 const randomColor = () => {
