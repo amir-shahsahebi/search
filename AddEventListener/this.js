@@ -5,7 +5,7 @@ const makeRandColor = () => {
   
     return `rgb(${r} , ${g} , ${b})`;
   };
-  
+
 const buttons = document.querySelectorAll("button"); 
 const h1s = document.querySelectorAll("h1");
 
@@ -16,6 +16,7 @@ const colorize3 = function () {
   
   for (let button of buttons) {
     button.addEventListener("click", colorize3);
+    button.addEventListener("mousemove", colorize3);
   }
   
   for (let h1 of h1s) {
