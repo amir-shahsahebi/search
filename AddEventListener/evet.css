@@ -1,0 +1,13 @@
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transition: border-radius ease-in 0.7s;
+}
+
+.circle {
+  border-radius: 50%;
+}
