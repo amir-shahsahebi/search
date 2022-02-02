@@ -11,10 +11,11 @@ tweetForm.addEventListener("submit", (e) => {
   //   console.log(tweetForm.elements.tweet.value);
 
   //   there is better another way, you are selecting the inputs value by names
-    // e.target.name.value
+
+  console.log(e.target);
   console.log(e.target.username.value);
   console.dir(e.target.tweet.value);
-
+  // e.target.name.value  
   let usernameInput = e.target.username.value;
   let tweetInput = e.target.tweet.value;
 
