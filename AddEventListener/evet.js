@@ -37,9 +37,9 @@ let divTop = 50;
 let divLeft = 50;
 
 const div = document.querySelector("div");
-console.log(div.getClientRects());
-window.addEventListener("keydown", (e) => {
-  console.log(e)
+// console.log(div.getClientRects());
+// window.addEventListener("keydown", (e) => {
+//   console.log(e)
   // switch (e.code) {
   //   case "ArrowUp":
   //     console.log((div.style.top = `${divTop--}px`));
@@ -59,4 +59,11 @@ window.addEventListener("keydown", (e) => {
   //   default:
   //     console.log("IGNORED");
   // }
+// });
+
+window.addEventListener("mousemove", (e) => {
+  div.style.top = `${e.clientY}px`;
+  console.log(e.clientY);
+  div.style.left = `${e.clientX}px`;
+  console.log(e.clientX);
 });
