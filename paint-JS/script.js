@@ -28,19 +28,15 @@ palet.addEventListener("click", (e)=>{
         }
         color = e.target.style.backgroundColor
         e.target.style.borderRadius = "50px"
+        eraser=false
+        
+        btnEraser.style.backgroundColor = "white";
+        btnEraser.style.color = "black";
     }
-    console.dir(color)
+    // console.dir(color)
 })
 makeColor()
-// let board = document.querySelector(".white-board")
-// board.addEventListener("mousemove",(e)=>{
-//     dot = document.createElement("div");
-//     dot.classList.add("p1");
-//     dot.style.backgroundColor= color;
-//     dot.style.top= e.clientY + "px";
-//     dot.style.left= e.clientX + "px";
-//     board.append(dot)
-// })
+
 let mouseIsDown = false
 board.addEventListener('mousedown', function(){
     mouseIsDown = true
@@ -48,9 +44,9 @@ board.addEventListener('mousedown', function(){
 board.addEventListener('mouseup', function(){
     mouseIsDown = false
 })
-
-board.addEventListener("mousemove",(e)=>{
-    if (mouseIsDown) {
+let eraser = false
+    board.addEventListener("mousemove",(e)=>{
+    if (mouseIsDown && !eraser) {
     dot = document.createElement("div");
     dot.classList.add("p1");
     dot.style.backgroundColor= color;
@@ -66,7 +62,8 @@ resetColor.addEventListener("click" ,  ()=> {
     for (co of colors) {
         co.remove()
     }
-    console.log(colors)
+    // let btnEraser = document.querySelector(".eraser")
+    // console.log(colors)
     makeColor()
 })
 
@@ -86,5 +83,35 @@ backgroundBoard.addEventListener("click",()=> {
 }) 
 
 //eraser 
-let btnEraser = document.createElement("button")
-btnEraser.classList.add(".reset-board")
+    let btnEraser = document.createElement("button");
+    btnEraser.classList.add(".eraser");
+    btnEraser.style.position = "absolute";
+    btnEraser.style.bottom= "-15px"
+    btnEraser.style.left= "7px"
+    btnEraser.style.width= "85%"
+    btnEraser.style.height= "25px"
+
+    btnEraser.innerText = "Eraser";
+    palet.append(btnEraser);
+    btnEraser.addEventListener("click",(t)=> {
+        eraser = true
+            btnEraser.style.backgroundColor = "red";
+            btnEraser.style.color = "white";
+        // t.stopImmediatePropagation();
+        let mouseIsDown = false;
+        board.addEventListener("mousedown", function () {
+            mouseIsDown = true;
+        });
+        board.addEventListener("mouseup", function () {
+            mouseIsDown = false;
+        });
+        
+        board.addEventListener("mousemove", (e) => {
+            if (mouseIsDown) {
+                if (e.target.nodeName==="DIV" && e.target.className ==="p1") {
+                    e.target.remove()
+                }
+            }
+        });
+        
+    })
