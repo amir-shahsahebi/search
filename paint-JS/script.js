@@ -1,6 +1,6 @@
 let board = document.querySelector(".white-board")
 color= "black"
-// if (board.style.backgroundColor==="black") color = "white"
+if (board.style.backgroundColor==="black") color = "white"
 
 let rgb = () => {
     let r = Math.floor(Math.random()*256)
@@ -18,7 +18,6 @@ function makeColor() {
         palet.append(div2)
     }
 }
-
 
 palet.addEventListener("click", (e)=>{
     
@@ -43,8 +42,12 @@ makeColor()
 //     board.append(dot)
 // })
 let mouseIsDown = false
-board.addEventListener('mousedown', function(){mouseIsDown = true})
-board.addEventListener('mouseup', function(){mouseIsDown = false})
+board.addEventListener('mousedown', function(){
+    mouseIsDown = true
+})
+board.addEventListener('mouseup', function(){
+    mouseIsDown = false
+})
 
 board.addEventListener("mousemove",(e)=>{
     if (mouseIsDown) {
@@ -81,3 +84,7 @@ let backgroundBoard = document.querySelector(".background-board")
 backgroundBoard.addEventListener("click",()=> {
    board.style.backgroundColor= color
 }) 
+
+//eraser 
+let btnEraser = document.createElement("button")
+btnEraser.classList.add(".reset-board")
