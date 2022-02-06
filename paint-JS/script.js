@@ -59,3 +59,9 @@ resetBoard.addEventListener("click",()=> {
         co.remove()
     }
 }) 
+
+
+let backgroundBoard = document.querySelector(".background-board")
+backgroundBoard.addEventListener("click",()=> {
+   board.style.backgroundColor= color
+}) 
