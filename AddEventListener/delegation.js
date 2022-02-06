@@ -40,3 +40,16 @@ tweetsContainer.addEventListener("click", (e) => {
 window.addEventListener("click", (e)=> {
     console.dir(e.target.nodeName)
 })
+
+
+
+
+window.addEventListener("click",(e)=> {
+  let lis = document.querySelectorAll("li");
+  console.log(lis)
+    for (let li of lis) {
+      li.addEventListener("click", () => {
+        li.remove();
+      });
+    }
+})
