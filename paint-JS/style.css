@@ -11,12 +11,12 @@ h1 {
 .white-board {
     width: 90%;
     height: 500px;
-    background-color: aqua;
+    background-color: rgb(61, 161, 161);
     float: right;
 }
 
 .p1 {
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     width: 5px;
     height: 5px;
     position: absolute;
@@ -29,6 +29,13 @@ h1 {
     display: flex;
     flex-flow: row wrap ;
     /* align-content: space-between; */
+}
+.color {
+    /* background-color: red; */
+    width: 30px;
+    height: 30px;
+    border: 2px black solid;
+    margin: 5px;
 }
 .red {
     background-color: red;
