@@ -51,3 +51,11 @@ resetColor.addEventListener("click" ,  ()=> {
     console.log(colors)
     makeColor()
 })
+
+let resetBoard = document.querySelector(".reset-board")
+resetBoard.addEventListener("click",()=> {
+   let colors = document.querySelectorAll(".p1")
+    for (co of colors) {
+        co.remove()
+    }
+}) 
