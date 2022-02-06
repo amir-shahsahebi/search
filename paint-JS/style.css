@@ -2,7 +2,7 @@ h1 {
     text-align: center;
 }
 .container {
-    height: 90vh;
+    height: 500px;
     width: 100%;
     background-color: black;
 }
@@ -14,9 +14,14 @@ h1 {
 }
 
 .p1 {
-    background-color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     width: 5px;
     height: 5px;
     position: absolute;
     border-radius: 2px;
+}
+.palet {
+    width: 10%;
+    height: 100%;
+    background-color: brown;
 }
