@@ -1,4 +1,6 @@
-
+let board = document.querySelector(".white-board")
+color= "black"
+// if (board.style.backgroundColor==="black") color = "white"
 
 let rgb = () => {
     let r = Math.floor(Math.random()*256)
@@ -31,15 +33,28 @@ palet.addEventListener("click", (e)=>{
     console.dir(color)
 })
 makeColor()
-let board = document.querySelector(".white-board")
+// let board = document.querySelector(".white-board")
+// board.addEventListener("mousemove",(e)=>{
+//     dot = document.createElement("div");
+//     dot.classList.add("p1");
+//     dot.style.backgroundColor= color;
+//     dot.style.top= e.clientY + "px";
+//     dot.style.left= e.clientX + "px";
+//     board.append(dot)
+// })
+let mouseIsDown = false
+board.addEventListener('mousedown', function(){mouseIsDown = true})
+board.addEventListener('mouseup', function(){mouseIsDown = false})
+
 board.addEventListener("mousemove",(e)=>{
+    if (mouseIsDown) {
     dot = document.createElement("div");
-    // dot.className = "p1";
     dot.classList.add("p1");
     dot.style.backgroundColor= color;
     dot.style.top= e.clientY + "px";
     dot.style.left= e.clientX + "px";
     board.append(dot)
+    }
 })
 
 let resetColor = document.querySelector(".reset-color")
@@ -58,6 +73,7 @@ resetBoard.addEventListener("click",()=> {
     for (co of colors) {
         co.remove()
     }
+    board.style.backgroundColor= "white"
 }) 
 
 
