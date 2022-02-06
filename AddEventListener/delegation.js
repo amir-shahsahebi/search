@@ -43,11 +43,14 @@ window.addEventListener("click", (e)=> {
 
 
 
-
+// another way for deleting any items of list
 window.addEventListener("click",(e)=> {
+  // when we want to update a list for exp, we can add event listener and inside it we need to assign a variable that it update automaticaly when listener active
   let lis = document.querySelectorAll("li");
+  // lis is the lists of li that update
   console.log(lis)
     for (let li of lis) {
+      // because of lis is an array, we cant delet it, thus we use a loop for iterate on it to change 
       li.addEventListener("click", () => {
         li.remove();
       });
