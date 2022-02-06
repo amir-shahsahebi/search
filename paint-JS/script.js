@@ -36,6 +36,32 @@ palet.addEventListener("click", (e)=>{
     // console.dir(color)
 })
 makeColor()
+//define pen
+let penSize = "5px";
+pen1 = document.querySelector(".pen1")
+pen2 = document.querySelector(".pen2")
+pen3 = document.querySelector(".pen3")
+pen1.style.boxShadow = "5px 3px 3px rgba(0, 0, 0, 0.486)";
+
+pen1.addEventListener("click",()=>{
+     penSize = "5px"
+    pen1.style.boxShadow = "5px 3px 3px rgba(0, 0, 0, 0.486)";
+    pen2.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0.486)";
+    pen3.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0.486)";
+})
+pen2.addEventListener("click",()=>{
+     penSize = "10px"
+    pen2.style.boxShadow = "5px 3px 3px rgba(0, 0, 0, 0.486)";
+    pen1.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0.486)";
+    pen3.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0.486)";
+})
+pen3.addEventListener("click",()=>{
+     penSize = "15px"
+    pen3.style.boxShadow = "5px 3px 3px rgba(0, 0, 0, 0.486)";
+    pen1.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0.486)";
+    pen2.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0.486)";
+})
+
 
 let mouseIsDown = false
 board.addEventListener('mousedown', function(){
@@ -45,13 +71,15 @@ board.addEventListener('mouseup', function(){
     mouseIsDown = false
 })
 let eraser = false
-    board.addEventListener("mousemove",(e)=>{
+board.addEventListener("mousemove",(e)=>{
     if (mouseIsDown && !eraser) {
     dot = document.createElement("div");
     dot.classList.add("p1");
     dot.style.backgroundColor= color;
     dot.style.top= e.clientY + "px";
     dot.style.left= e.clientX + "px";
+    dot.style.width = penSize;
+    dot.style.height = penSize;
     board.append(dot)
     }
 })

@@ -134,3 +134,41 @@ h1 {
 footer p {
     text-align: center;
 }
+
+/* pens: */
+.pen1{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 35px;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgb(255, 255, 255);
+    border: black solid 1px;
+    /* box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.486); */
+    text-align: center;
+}
+.pen2{
+    position: absolute;
+    top: 0px;
+    left: 55px;
+    width: 35px;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgb(255, 255, 255);
+    border: black solid 1px;
+    /* box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.486); */
+    text-align: center;
+}
+.pen3{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 35px;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgb(255, 255, 255);
+    border: black solid 1px;
+    /* box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.486); */
+    text-align: center;
+}
