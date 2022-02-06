@@ -6,7 +6,7 @@ let rgb = () => {
     let b = Math.floor(Math.random()*256)
     return `rgb(${r},${g},${b})`
 }
-let n = 15
+let n = 16
 palet = document.querySelector(".palet")
 function makeColor() {
     for (i=1 ; i<n ; i++) {
@@ -19,8 +19,14 @@ function makeColor() {
 
 
 palet.addEventListener("click", (e)=>{
+    
     if (e.target.clientHeight===30) {
+        let colors = document.querySelectorAll(".color")
+        for (co of colors) {
+            co.style.borderRadius = "0px"
+        }
         color = e.target.style.backgroundColor
+        e.target.style.borderRadius = "50px"
     }
     console.dir(color)
 })
@@ -38,7 +44,10 @@ board.addEventListener("mousemove",(e)=>{
 
 let resetColor = document.querySelector(".reset-color")
 resetColor.addEventListener("click" ,  ()=> {
-    document.querySelectorAll(".color").remove()
-    // colors
+    let colors = document.querySelectorAll(".color")
+    for (co of colors) {
+        co.remove()
+    }
+    console.log(colors)
     makeColor()
 })
