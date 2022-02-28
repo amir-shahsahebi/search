@@ -19,3 +19,6 @@ let hours = Math.round(minutes/60)
 let days = Math.round(hours/24)
 let years = (days/365).toFixed(2)
 console.log(years , days , hours , minutes)
+
+// how to show timestamp
+console.log(new Date(1616565472556))
