@@ -1,0 +1,22 @@
+{
+  "name": "search",
+  "version": "1.0.0",
+  "description": "a note for my coding",
+  "main": "sortingAnObject.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amir-shahsahebi/search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amir-shahsahebi/search/issues"
+  },
+  "homepage": "https://github.com/amir-shahsahebi/search#readme",
+  "dependencies": {
+    "give-me-a-joke": "^0.5.1"
+  }
+}
