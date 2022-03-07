@@ -2,12 +2,14 @@
 // import * as all from 'give-me-a-joke';
 // import * as all from 'give-me-a-joke'
 import axios from 'axios';
-import getRandomDadJoke from 'give-me-a-joke';
+// axios = require('axios')
+// import all from 'give-me-a-joke';
+// let newJoke = all.getRandomDadJoke(x=>console.log(x))
 
-// console.log(axios)
-// console.log(getRandomDadJoke)
-let newJoke = getRandomDadJoke(x=>x)
-console.log(newJoke)
+console.log(axios)
+// console.log(all)
+// getRandomDadJoke()
+// console.log(newJoke)
 
 
 // console.log(joke)
