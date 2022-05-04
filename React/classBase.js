@@ -17,6 +17,7 @@ class Counter extends React.Component {
   // Change code below this line
   increment() {
     this.setState((state) => ({
+      // parenthesis is very important
       count: state.count + 1,
     }));
   }
