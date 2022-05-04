@@ -1,3 +1,6 @@
+// Free code camp;
+// Link:  https://www.freecodecamp.org/learn/front-end-development-libraries/react/write-a-simple-counter
+
 class Counter extends React.Component {
   constructor(props) {
     super(props);
