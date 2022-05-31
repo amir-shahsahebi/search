@@ -47,7 +47,7 @@ class CheckUserAge extends React.Component {
           ? buttonOne
           : this.state.userAge < 18
           ? buttonThree
-          : buttonOne}
+          : buttonTwo}
 
         {/* Change code above this line */}
       </div>
