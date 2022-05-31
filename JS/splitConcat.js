@@ -1,8 +1,9 @@
 const spacify = (terms) => {
-  const newTerm = "";
-  return terms.split("");
-  // terms.split("").map((term) => newTerm.concat(term));
-  // return newTerm;
-};
+  let newTerm = "";
 
-console.log("Hi", spacify("ali"));
+  terms.split("").map((term) => (newTerm += term + " "));
+  return newTerm.trim();
+};
+const spacify2 = (terms) => terms.split("").join(" ");
+// console.log("Hi", spacify("ali"));
+console.log(spacify2("ali"), "Hi");
